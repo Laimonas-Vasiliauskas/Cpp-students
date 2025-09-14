@@ -96,10 +96,10 @@ public:
         s.vidurkis();
         return in;
     }
-
+    //
     // Isvedimas (perdengtas cout)
     friend ostream& operator<<(ostream& out, const Studentas& s) {
-        out << "Vardas  " << "Pavarde  " << " Galutinis (vid.)"
+        out << "Vardas  " << "Pavarde  " << " Galutinis (vid.)" 
             << s.vardas << " " << s.pavarde << s.rezultatas;
         return out;
     }
