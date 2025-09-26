@@ -22,7 +22,6 @@ class Studentas {
 
     static bool naudotiMediana_;
 
-
     void vidurkis() {
         if (!pazymiai.empty()) {
             double avg = std::accumulate(pazymiai.begin(), pazymiai.end(), 0.0) / pazymiai.size();
@@ -36,8 +35,7 @@ class Studentas {
         if (!pazymiai.empty()) {
             std::vector<int> t = pazymiai;
             std::sort(t.begin(), t.end());
-            double med = (t.size() % 2 == 0) ? (t[t.size() / 2 - 1] + t[t.size() / 2]) / 2.0
-                : t[t.size() / 2];
+            double med = (t.size() % 2 == 0) ? (t[t.size() / 2 - 1] + t[t.size() / 2]) / 2.0 : t[t.size() / 2];
             rezultatasM = med * 0.4 + egzaminas * 0.6;
         }
         else {
@@ -77,13 +75,11 @@ public:
     Studentas() {
 
     }
-    Studentas(string v, string p, vector<int> paz, int egzas) {
+    Studentas(string v, string p, vector<int>paz, int egzas) {
         vardas = v;
         pavarde = p;
         pazymiai = paz;
         egzaminas = egzas;
-        vidurkis();
-        mediana();
     }
 
     // priskyrimo-kopijavimo operatorius
@@ -111,16 +107,16 @@ public:
     friend istream& operator>>(istream& in, Studentas& s) {
         cout << "Iveskite varda ir pavarde: ";
         in >> s.vardas >> s.pavarde;
+        cout << "Iveskite pazymius" << std::endl;
+        cout << "Baige vesti pazymius paspauskite x ir tada Enter klavisa" << std::endl;
 
-        cout << "Kiek ND pazymiu? ";
-        int n = 0;
-        in >> n;
-
-        s.pazymiai.clear();
-        s.pazymiai.resize(n);
-        cout << "Iveskite " << n << " ND pazymius: ";
-        for (int i = 0; i < n; ++i) in >> s.pazymiai[i];
-
+        string input;
+        while (true) {
+            in >> input;
+            if (input == "x") break;
+            s.pazymiai.push_back(std::stoi(input));
+        }
+        
         cout << "Iveskite egzamino pazymi: ";
         in >> s.egzaminas;
 
@@ -135,9 +131,10 @@ public:
 
     // Isvedimas (perdengtas cout)
     friend std::ostream& operator<<(std::ostream& out, const Studentas& s) {
-        out << std::left << std::setw(13) << s.vardas
-            << std::setw(13) << s.pavarde
-            << std::fixed << std::setprecision(2)
+        out << std::left << std::setw(13) 
+            << s.vardas << std::setw(13) 
+            << s.pavarde << std::fixed 
+            << std::setprecision(2) 
             << (naudotiMediana_ ? s.rezultatasM : s.rezultatasV);
         return out;
     }
@@ -147,7 +144,7 @@ bool Studentas::naudotiMediana_ = false;
 
 int main()
 {
-    Studentas st;
+    Studentas st = Studentas();
     std::cin >> st;                 
     Studentas::printHeader(std::cout);
     std::cout << st << "\n";
