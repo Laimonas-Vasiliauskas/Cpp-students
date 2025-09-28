@@ -1,0 +1,10 @@
+Vardas      Pavarde        ND1 ND2 ND3 ND4 ND5  Egzaminas
+Ruta        Jankauskaite    10   6   1   9   9          1
+Justinas    Simkus          10   6  10   8   3          6
+Gintare     Grigaite         6   4   9   5   6          8
+Aiste       Stankeviciute    8   4   3   2   4          9
+Karolina    Petrauskaite     4   7   8   3   6          7
+Tomas       Vasiliauskas     2   9   7   5   8          8
+Andrius     Valincius        8   8   2   5   1         10
+Ieva        Kazlauskaite     4   7  10   8   9          8
+Mantas      Sakalauskas     10  10  10  10  10         10
