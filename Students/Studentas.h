@@ -70,4 +70,6 @@ public:
     // atsitiktiniu skaiciu generavimas
     void randomize(size_t n, unsigned seed = std::random_device{}());
 
+    static void pasirinkimas();
+
 };
