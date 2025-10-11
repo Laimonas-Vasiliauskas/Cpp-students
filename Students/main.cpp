@@ -4,6 +4,8 @@
 #include <iomanip>
 #include <algorithm>
 #include <vector>
+#include <list>
+#include <deque> 
 
 using std::string;
 using std::vector;
@@ -23,12 +25,9 @@ using std::right;
 
 
 int main() { 
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-
-
-    Studentas st;
-    st.pasirinkimas();
-
+   
+    std::vector<Studentas> studentai;
+    Studentas::pasirinkimas();
+           
     return 0;
 }

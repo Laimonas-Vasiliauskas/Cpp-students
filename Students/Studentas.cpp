@@ -172,65 +172,66 @@ void Studentas::pasirinkimas() {
     bool hasData = false; 
 
     switch (m) {
-    case 1: {
-        std::cout << "Generuoju 5 failus...\n";
-        generate_all(rng);
-        std::cout << "Baigta.\n";
+        case 1: {
+            std::cout << "Generuoju 5 failus...\n";
+            generate_all(rng);
+            std::cout << "Baigta.\n";
         
-        cout << "Ar failuose sugeneruotiems studentams paskaiciuoti galutini bala " << endl;
-        cout << "ir isvesti i atskirus failus(islaike.txt), (neislaike.txt)" << endl;
-        cout << "Jeigu taip, iveskite raide [T] ir spauskite enter" << endl;
-        char y;
-        cin >> y;
-        if (y == 't' || y == 'T'){
-        cout << "Rezultata [m]ediana ar [v]idurkis? ";
-        char c;
-        cin >> c;
-        bool naudotiMediana = (c == 'm' || c == 'M');
-        process_all_inputs(naudotiMediana);   // ← nuskaito visus 5 ir sukuria 2 bendrus failus
+            cout << "Ar failuose sugeneruotiems studentams paskaiciuoti galutini bala " << endl;
+            cout << "ir isvesti i atskirus failus(islaike.txt), (neislaike.txt)" << endl;
+            cout << "Jeigu taip, iveskite raide [T] ir spauskite enter" << endl;
+            char y;
+            cin >> y;
+            if (y == 't' || y == 'T'){
+            cout << "Rezultata [m]ediana ar [v]idurkis? ";
+            char c;
+            cin >> c;
+            bool naudotiMediana = (c == 'm' || c == 'M');
+            process_all_inputs(naudotiMediana);   // ← nuskaito visus 5 ir sukuria 2 bendrus failus
+            }
+            break;
         }
-        break;
-    }
-    case 2: {
-        string fname;
-        cout << "Iveskite failo pavadinima: ";
-        cin >> fname;
-        try {
-            studentai = readStudentsFromFile(fname);
-            hasData = !studentai.empty();
+        case 2: {
+            string fname;
+            cout << "Iveskite failo pavadinima: ";
+            cin >> fname;
+            try {
+                studentai = readStudentsFromFile(fname);
+                hasData = !studentai.empty();
+            }
+            catch (const std::exception& e) {
+                std::cerr << "Nepavyko nuskaityti failo: " << e.what() << endl;
+            }
+            break;
         }
-        catch (const std::exception& e) {
-            std::cerr << "Nepavyko nuskaityti failo: " << e.what() << endl;
+        case 3: {
+            string v, p;
+            cout << "Iveskite varda ir pavarde: ";
+            cin >> v >> p;
+
+            cout << "Kiek pazymiu sugeneruoti (1..10)? ";
+            int n; cin >> n;
+
+            s = Studentas(v, p, {}, 0);
+            s.randomize(n);
+            studentai.push_back(s);      
+            hasData = true;
+            break;
         }
-        break;
-    }
-    case 3: {
-        string v, p;
-        cout << "Iveskite varda ir pavarde: ";
-        cin >> v >> p;
-
-        cout << "Kiek pazymiu sugeneruoti (1..10)? ";
-        int n; cin >> n;
-
-        s = Studentas(v, p, {}, 0);
-        s.randomize(n);
-        studentai.push_back(s);      
-        hasData = true;
-        break;
-    }
-    case 4:
-        cout << "Iveskite: Vardas Pavarde Pazymius (pabaigai 'x'), tada egzamino bala\n";
-        cin >> s;
-        studentai.push_back(s);
-        hasData = true;
-        break;
-
-    case 0:
-        return; 
-
-    default:
-        std::cout << "Neteisingas pasirinkimas\n";
-        break;
+        case 4: {
+            cout << "Iveskite: Vardas Pavarde Pazymius (pabaigai 'x'), tada egzamino bala\n";
+            cin >> s;
+            studentai.push_back(s);
+            hasData = true;
+            break;
+        }
+        case 0: {
+            return;
+        }
+        default: {
+            std::cout << "Neteisingas pasirinkimas\n";
+            break;
+        }
     }
     if (hasData) {
         cout << "Pasirinkite rezultata: [m]ediana arba [v]idurkis: ";
