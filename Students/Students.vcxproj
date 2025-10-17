@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="benchmark.cpp" />
     <ClCompile Include="io.cpp" />
     <ClCompile Include="Studentas.cpp" />
     <ClCompile Include="main.cpp" />
