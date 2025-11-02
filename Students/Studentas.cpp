@@ -193,7 +193,7 @@ void Studentas::pasirinkimas() {
         cout << "[1] Sugeneruoti 5 atsitiktiniu failus" << endl;
         cout << "[2] Nuskaityti duomenis is esamo failo" << endl;
         cout << "[3] Sugeneruoti pazymius atsitiktine tvarka" << endl;
-        cout << "[4] Suvesti varda, pavarde ir pazymius rankiniu budu" << endl;
+        cout << "[4] Suvesti varda, pavarde ir pazymius rankiniu budu (pabaigai 'x') tada egzamino bala. PVZ(pazymiai 'x' egzamino balas)" << endl;
         cout << "[5] Paleisti benchmark (strategijos/konteineriai)" << endl;
         cout << "[0] Iseiti" << endl;
 
