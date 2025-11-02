@@ -1,0 +1,65 @@
+vector
+Generuoju 5 failus...
+Generuoju studentai_1k.txt (1000)... Sugeneruota per 4 ms
+Generuoju studentai_10k.txt (10000)... Sugeneruota per 24 ms
+Generuoju studentai_100k.txt (100000)... Sugeneruota per 190 ms
+Generuoju studentai_1m.txt (1000000)... Sugeneruota per 1929 ms
+Generuoju studentai_10m.txt (10000000)... Sugeneruota per 21347 ms
+Uztruko generuoti failus: 23497 ms
+Baigta.
+Ar failuose sugeneruotiems studentams paskaiciuoti galutini bala
+ir isvesti i atskirus failus(islaike.txt), (neislaike.txt)
+Jeigu taip, iveskite raide [T] ir spauskite enter
+t
+Rezultata [m]ediana ar [v]idurkis? m
+[Nuskaitymas] studentai_1k.txt: 1000 irasu per 3 ms
+[Nuskaitymas] studentai_10k.txt: 10000 irasu per 37 ms
+[Nuskaitymas] studentai_100k.txt: 100000 irasu per 290 ms
+[Nuskaitymas] studentai_1m.txt: 1000000 irasu per 2732 ms
+[Nuskaitymas] studentai_10m.txt: 10000000 irasu per 28367 ms
+Sukurta: neislaike.txt = 4445219, islaike.txt = 6665781
+Suvestine: Nuskaitymas = 31429 ms, Irasymas = 12328 ms, VISO=44389 ms
+
+list
+Generuoju 5 failus...
+Generuoju studentai_1k.txt (1000)... Sugeneruota per 6 ms
+Generuoju studentai_10k.txt (10000)... Sugeneruota per 27 ms
+Generuoju studentai_100k.txt (100000)... Sugeneruota per 224 ms
+Generuoju studentai_1m.txt (1000000)... Sugeneruota per 1963 ms
+Generuoju studentai_10m.txt (10000000)... Sugeneruota per 20534 ms
+Uztruko generuoti failus: 22758 ms
+Baigta.
+Ar failuose sugeneruotiems studentams paskaiciuoti galutini bala
+ir isvesti i atskirus failus(islaike.txt), (neislaike.txt)
+Jeigu taip, iveskite raide [T] ir spauskite enter
+t
+Rezultata [m]ediana ar [v]idurkis? m
+[Nuskaitymas] studentai_1k.txt: 1000 irasu per 4 ms
+[Nuskaitymas] studentai_10k.txt: 10000 irasu per 21 ms
+[Nuskaitymas] studentai_100k.txt: 100000 irasu per 268 ms
+[Nuskaitymas] studentai_1m.txt: 1000000 irasu per 2696 ms
+[Nuskaitymas] studentai_10m.txt: 10000000 irasu per 27377 ms
+Sukurta: neislaike.txt = 4444085, islaike.txt = 6666915
+Suvestine: Nuskaitymas = 30366 ms, Irasymas = 11226 ms, VISO=42226 ms
+
+deque
+Generuoju 5 failus...
+Generuoju studentai_1k.txt (1000)... Sugeneruota per 3 ms
+Generuoju studentai_10k.txt (10000)... Sugeneruota per 26 ms
+Generuoju studentai_100k.txt (100000)... Sugeneruota per 205 ms
+Generuoju studentai_1m.txt (1000000)... Sugeneruota per 1993 ms
+Generuoju studentai_10m.txt (10000000)... Sugeneruota per 20401 ms
+Uztruko generuoti failus: 22633 ms
+Baigta.
+Ar failuose sugeneruotiems studentams paskaiciuoti galutini bala
+ir isvesti i atskirus failus(islaike.txt), (neislaike.txt)
+Jeigu taip, iveskite raide [T] ir spauskite enter
+t
+Rezultata [m]ediana ar [v]idurkis? m
+[Nuskaitymas] studentai_1k.txt: 1000 irasu per 3 ms
+[Nuskaitymas] studentai_10k.txt: 10000 irasu per 26 ms
+[Nuskaitymas] studentai_100k.txt: 100000 irasu per 227 ms
+[Nuskaitymas] studentai_1m.txt: 1000000 irasu per 2311 ms
+[Nuskaitymas] studentai_10m.txt: 10000000 irasu per 23919 ms
+Sukurta: neislaike.txt = 4443804, islaike.txt = 6667196
+Suvestine: Nuskaitymas = 26486 ms, Irasymas = 9789 ms, VISO=36796 ms
