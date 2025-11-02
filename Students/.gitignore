@@ -1,6 +1,37 @@
-﻿studentai_*.txt
+﻿# Build artefaktai
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# VS / MSVC
+/.vs/
+/Debug/
+/Release/
+/x64/
+/ipch/
+/*.vcxproj*
+/*.sln
+*.obj
+*.pch
+*.pdb
+*.idb
+*.ilk
+*.exe
+*.dll
+*.lib
+*.log
+
+# Sugeneruoti duomenys
+*.txt
+data/
+Students/*.txt
+studentai_*.txt
 islaike.txt
 neislaike.txt
-Students/neislaike.txt
-Students/islaike.txt
-Students/studentai_*.txt
+
+# OS šiukšlės
+.DS_Store
+Thumbs.db
+
