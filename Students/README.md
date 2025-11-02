@@ -39,10 +39,8 @@
 ### Unix / macOS / WSL:
 
 ```bash
-git clone https://github.com/<jusu_vardas>/Cpp-students.git
-cd Cpp-students
-mkdir -p build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-cmake --build .
-
+git clone https://github.com/Laimonas-Vasiliauskas/Cpp-students.git
+cd Cpp-students/Students
+cmake -S . -B build
+cmake --build build
 ```
